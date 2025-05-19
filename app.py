@@ -18,7 +18,7 @@ for prefecture in prefectures:
         prefecture['description'],
         max_width=300, offset=(0, -20),
     ),
-    icon=folium.Icon,
+    icon=folium.Icon(color="red"),
 ).add_to(map)
 
 st.subheader('北方水滸伝　地図')
