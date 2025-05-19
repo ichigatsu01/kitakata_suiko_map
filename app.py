@@ -10,8 +10,6 @@ with open("prefecture.json", mode="r", encoding="utf-8") as f:
     prefectures = json.loads(f.read())
 
 for prefecture in prefectures:
-    # lat = prefecture['lat']
-    # lon = prefecture['lon']
     folium.Marker(
     location=[prefecture['lat'], prefecture['lon']],
     tooltip=prefecture['name_Song'],
@@ -19,7 +17,7 @@ for prefecture in prefectures:
         prefecture['description'],
         max_width=300, offset=(0, -20),
     ),
-    icon=folium.Icon(color="blue"),
+    icon=folium.Icon(color=prefecture['color']),
 ).add_to(map)
 
 # 3カラムで真ん中に地図を置く
