@@ -2,6 +2,7 @@ import folium
 import json
 import streamlit as st
 from streamlit_folium import st_folium
+st.set_page_config(layout="wide")
 
 map = folium.Map(location=(35.78723722411855, 116.09248508465616), zoom_start=6, min_zoom=4, control_scale=True)
 
@@ -22,4 +23,4 @@ for prefecture in prefectures:
 ).add_to(map)
 
 st.subheader('北方水滸伝　地図')
-st_data = st_folium(map, width=900, height=700)
+st_data = st_folium(map, width=1200, height=800)
