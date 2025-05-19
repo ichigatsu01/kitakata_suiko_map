@@ -23,4 +23,10 @@ for prefecture in prefectures:
 ).add_to(map)
 
 st.subheader('北方水滸伝　地図')
-st_data = st_folium(map, width=1200, height=800)
+
+# 3カラムで真ん中に地図を置く
+col1, col2, col3 = st.columns([1, 5, 1])
+
+with col2:
+    st.markdown("### 北方水滸伝　地図", unsafe_allow_html=True)
+    st_data = st_folium(map, width=1000, height=800)
