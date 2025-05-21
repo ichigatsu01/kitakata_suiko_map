@@ -22,3 +22,28 @@
 ## その他メモ
 二竜山、桃花山、清風山の位置は現実と小説でズレてる可能性が高い。
 一旦ブラウジングで確認できたものを記載しつつ、最終的には北方水滸伝ベースに直す必要がありそう。
+
+## 作成経緯
+マーカーを強調するためにleaflet.jsの導入を検討した。    
+ただ、強調するだけならselectbox&if文でマップを再レンダリングすることで対処可能と分かったため、  
+Streamlitのみでの対処とした。
+
+
+# foliumの使い方について ... sandbox.ipynbでまとめたものを転記
+## icon(https://python-visualization.github.io/folium/latest/reference.html)：
+### 要約
+デフォルトでは[glyphicon for bootstrap 3](https://getbootstrap.com/docs/3.3/components/)が適用されており、これらの中からicon名を設定する。   
+ただし使えないものもあるようで、使えるかどうかは実際に試さないとわからなさそう。    
+prefixで'fa'を指定するとfont-awesomeを使えるようになる。
+
+### 使える色
+[‘red’, ‘blue’, ‘green’, ‘purple’, ‘orange’, ‘darkred’,     
+’lightred’, ‘beige’, ‘darkblue’, ‘darkgreen’, ‘cadetblue’, ‘darkpurple’,    
+‘white’, ‘pink’, ‘lightblue’, ‘lightgreen’, ‘gray’, ‘black’, ‘lightgray’]
+
+### 原文(抜粋)
+- icon (str, default 'info-sign')
+The name of the marker sign. See Font-Awesome website to choose yours. Warning : depending on the icon you choose you may need to adapt the prefix as well.
+
+- prefix (str, default 'glyphicon')
+The prefix states the source of the icon. ‘fa’ for font-awesome or ‘glyphicon’ for bootstrap 3.
